@@ -1,4 +1,4 @@
-const express = require('express');
+cconst express = require('express');
 const router  = express.Router();
 const User    = require('../models/user');
 const bcrypt  = require('bcrypt');
@@ -130,6 +130,7 @@ router.get('/home', async (req, res, next) => {
 
 
 router.post('/', async (req, res) => {
+   console.log("can you see this?")
 
   // query the database
   try {
@@ -175,6 +176,7 @@ router.post('/', async (req, res) => {
 
 
 router.post('/register', async (req, res) => {
+  console.log("can you see this?")
   // Encrypt our password
   const password = req.body.password;
   // encrypt our password
